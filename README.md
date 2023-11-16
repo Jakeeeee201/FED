@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Jake Posthouwer
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Zwarte piste
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Surface plane
  
 </details>
 
@@ -37,6 +37,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.elisava.net/en/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
