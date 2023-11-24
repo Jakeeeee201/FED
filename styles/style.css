@@ -1,31 +1,269 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	/* colors */
+	--color-black: #000000;
+	--color-white: #ffffff;
+
+	/* font */
+	--font-family-medium: 'NeueHaasGrotesMedium';
+	--font-family-bold: 'NeueHaasGrotesBold';
+
+	--font-path-medium: '../fonts/NeueHaasGrotesMedium.woff2';
+	--font-path-bold: '../fonts/NeueHaasGrotesBold.woff2';
+
+	/* font sizes */
+	--heading-1: 18rem;
+	--heading-2: 18rem;
+	--heading-3: 1.4rem;
+	--heading-4: 6.4rem;
+	--heading-5: 4rem;
+	--body-text: 1.4rem;
+
+	/* font weights */
+	--font-weight-thin: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+
+	/* line heights */
+	--line-height-small: 1;
+	--line-height-medium: 1.06;
+	--line-height-large: 1.14;
+
+
+	/* spacing */
+
+
+	/* border radius */
+
+
+	/* animation */
+}
+
+@font-face {
+	font-family: var(--font-family-medium);
+	src: url('../fonts/NeueHaasGrotesMedium.woff2') format('woff2');
+	font-weight: var(--font-weight-medium);
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: var(--font-family-bold);
+	src: url('../fonts/NeueHaasGrotesBold.woff2') format('woff2');
+	font-weight: var(--font-weight-bold);
+	font-style: normal;
+}
+
+body {
+	font-family: var(--font-family-medium), sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+a,
+span {
+	display: block;
+	text-decoration: none;
+	color: var(--color-black)
+}
+
+a {
+	font-weight: var(--font-weight-bold);
+	text-transform: uppercase;
+}
+
+p,
+a,
+li {
+	font-size: var(--body-text);
+	line-height: var(--line-height-large);
+}
+
+h1 {
+	font-size: var(--heading-1);
+	/* font-family: var(--font-family-medium); */
+	text-transform: uppercase;
+
+	display: flex;
+	align-items: center;
+}
+
+h2 {
+	font-size: var(--heading-2);
+}
+
+h3 {
+	font-size: var(--heading-3);
+
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+h3::before {
+	content: "";
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	background: black;
+	border-radius: 5rem;
+}
+
+h4 {
+	font-size: var(--heading-4);
+	line-height: var(--line-height-small);
+}
+
+h5 {
+	font-size: var(--heading-5);
+	line-height: var(--line-height-medium);
+}
+
+ul {
+	list-style-type: none;
+}
+
+svg {
+	fill: #000;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+header {
+	padding: 1.5rem 2.4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav ul {
+	display: flex;
+	gap: 4rem;
+}
+
+span.circle {
+	margin-right: 0.2rem;
+	width: 13rem;
+	height: 13rem;
+	background: black;
+	border-radius: 50%;
+}
+
+section {
+	padding: 2.4rem;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: start;
+}
+
+section.hero {
+	grid-template-columns: 1fr;
+}
+
+section h3 {
+	margin-top: 0.8rem;
+	grid-column: 1 / 4;
+}
+
+section div {
+	grid-column: 4 / 13;
+}
+
+div.grid__2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0 2.4rem;
+}
+
+div.grid__2 h4,
+div.grid__2 h5 {
+	margin-bottom: 6.4rem;
+	grid-column: span 2;
+}
+
+div.grid__2 p {
+	margin-bottom: 2.4rem;
+	grid-column: span 1;
+}
+
+div.grid__2 a {
+	grid-column: span 2;
+}
+
+a.link {
+	padding: 1.4rem 0;
+	display: flex;
+	justify-content: center;
+	border: 0.1rem solid var(--color-black);
+	border-radius: 0.4rem;
+}
+
+ul.accordion {
+	grid-column: 1 / 13;
+}
+
+ul.accordion h2 {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+ul.accordion h2 div {
+	display: flex;
+	align-items: center;
 }
 
 
 
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
+ul.service__list h2 {
+	font-size: 8rem;
+}
 
-/* jouw code */
+ul.service__list li {
+	padding: 1.6rem;
+	background: #ff2803;
+}
 
+ul.service__list li img{
+	margin-bottom: 3.2rem;
+	max-width: 23rem;
+}
+
+ul.service__list ul {
+	border-bottom: 0.1rem solid var(--color-black);
+}
+
+ul.service__list ul li {
+	padding: 0.2rem 0;
+	border-top: 0.1rem solid var(--color-black);
+}
+
+.service__tag {
+	width: 3.4rem;
+	height: 3.4rem;
+	background: var(--color-black);
+	color: var(--color-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+}
