@@ -28,14 +28,19 @@
 	--line-height-medium: 1.06;
 	--line-height-large: 1.14;
 
-
 	/* spacing */
-
+	--spacig-unit: 0.8rem;
+	--spacing-small: var(--spacig-unit);
+	--spacing-medium: calc(2 * var(--spacig-unit));
+	--spacing-large: calc(3 * var(--spacig-unit));
+	--spacing-xlarge: calc(4 * var(--spacig-unit));
 
 	/* border radius */
-
+	--border-radius: 5rem;
 
 	/* animation */
+	--animation-duration: 0.3s;
+	--ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 @font-face {
@@ -92,7 +97,6 @@ h1 {
 	font-size: var(--heading-1);
 	/* font-family: var(--font-family-medium); */
 	text-transform: uppercase;
-
 	display: flex;
 	align-items: center;
 }
@@ -103,10 +107,9 @@ h2 {
 
 h3 {
 	font-size: var(--heading-3);
-
 	display: flex;
 	align-items: center;
-	gap: 0.8rem;
+	gap: var(--spacing-small);
 }
 
 h3::before {
@@ -147,7 +150,7 @@ button {
 }
 
 header {
-	padding: 1.5rem 2.4rem;
+	padding: 1.5rem var(--spacing-large);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -158,16 +161,8 @@ header nav ul {
 	gap: 4rem;
 }
 
-span.circle {
-	margin-right: 0.2rem;
-	width: 13rem;
-	height: 13rem;
-	background: black;
-	border-radius: 50%;
-}
-
 section {
-	padding: 2.4rem;
+	padding: var(--spacing-large);
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	align-items: start;
@@ -178,7 +173,7 @@ section.hero {
 }
 
 section h3 {
-	margin-top: 0.8rem;
+	margin-top: var(--spacing-small);
 	grid-column: 1 / 4;
 }
 
@@ -189,7 +184,7 @@ section div {
 div.grid__2 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 0 2.4rem;
+	gap: 0 var(--spacing-large);
 }
 
 div.grid__2 h4,
@@ -199,7 +194,7 @@ div.grid__2 h5 {
 }
 
 div.grid__2 p {
-	margin-bottom: 2.4rem;
+	margin-bottom: var(--spacing-large);
 	grid-column: span 1;
 }
 
@@ -222,7 +217,7 @@ ul.accordion {
 ul.accordion h2 {
 	display: flex;
 	align-items: center;
-	gap: 1.6rem;
+	gap: var(--spacing-medium);
 }
 
 ul.accordion h2 div {
@@ -239,12 +234,12 @@ ul.service__list h2 {
 }
 
 ul.service__list li {
-	padding: 1.6rem;
+	padding: var(--spacing-medium);
 	background: #ff2803;
 }
 
-ul.service__list li img{
-	margin-bottom: 3.2rem;
+ul.service__list li img {
+	margin-bottom: var(--spacing-xlarge);
 	max-width: 23rem;
 }
 
@@ -266,4 +261,13 @@ ul.service__list ul li {
 	justify-content: center;
 	align-items: center;
 	border-radius: 100%;
+}
+
+
+span.circle {
+	margin-right: 0.2rem;
+	width: 13rem;
+	height: 13rem;
+	background: black;
+	border-radius: 50%;
 }
