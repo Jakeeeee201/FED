@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+
+	<meta name="description" content="Front-end Development | HvA, CMD">
+	<meta name="keywords" content="Front-end, HvA, CMD">
+	<meta name="author" content="Jake Posthouwer">
+	<title>Eindopdracht | FED</title>
+</head>
+
+<body>
+	<header>
+		<a href="./" aria-label="Home">
+			<svg class="PressPlayOnTape__word PressPlayOnTape__word--press" width="54" height="15" viewBox="0 0 54 15"
+				preserveAspectRatio="xMinYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M11.8012 13.179H14.5192V9.06362H16.1622C17.3293 9.06362 17.8514 9.61643 17.9896 10.6299C18.1585 11.7202 18.1124 13.01 18.4042 13.179H21.0453V13.0408C20.6615 12.9026 20.815 11.5205 20.5847 10.0771C20.4311 8.98685 19.9397 8.38797 18.9877 8.0655V8.01944C20.2622 7.57412 20.8918 6.63742 20.8918 5.3629C20.8918 3.32059 19.2334 2.19962 17.0529 2.19962H11.8012V13.179ZM14.5192 7.05203V4.34942H16.6229C17.6671 4.34942 18.1892 4.91758 18.1892 5.71608C18.1892 6.54529 17.6364 7.05203 16.5615 7.05203H14.5192Z">
+				</path>
+				<path
+					d="M22.1033 13.179H30.5183V10.8756H24.8213V8.52618H29.6276V6.40709H24.8213V4.44156H30.4261V2.19962H22.1033V13.179Z">
+				</path>
+				<path
+					d="M36.047 13.44C38.5807 13.44 40.5463 12.1655 40.5463 9.86212C40.5463 7.5127 38.7036 6.88311 36.6613 6.40709C35.0182 6.03855 34.1736 5.85428 34.1736 5.0865C34.1736 4.47227 34.8032 4.05766 35.7553 4.05766C36.7687 4.05766 37.4137 4.53369 37.5212 5.37826H40.1777C40.0702 3.0749 38.2275 2 35.8474 2C33.3905 2 31.4864 3.02883 31.4864 5.37826C31.4864 7.68161 33.498 8.26513 35.4021 8.71044C36.9069 9.07898 37.7976 9.26325 37.7976 10.1385C37.7976 10.9677 36.9223 11.2902 36.0317 11.2902C34.7264 11.2902 34.0047 10.8295 33.8819 9.72392H31.1486C31.21 12.1501 33.1294 13.44 36.047 13.44Z">
+				</path>
+				<path
+					d="M46.1842 13.44C48.7179 13.44 50.6834 12.1655 50.6834 9.86212C50.6834 7.5127 48.8407 6.88311 46.7984 6.40709C45.1554 6.03855 44.3108 5.85428 44.3108 5.0865C44.3108 4.47227 44.9404 4.05766 45.8924 4.05766C46.9059 4.05766 47.5509 4.53369 47.6583 5.37826H50.3149C50.2074 3.0749 48.3647 2 45.9846 2C43.5277 2 41.6235 3.02883 41.6235 5.37826C41.6235 7.68161 43.6351 8.26513 45.5393 8.71044C47.0441 9.07898 47.9347 9.26325 47.9347 10.1385C47.9347 10.9677 47.0595 11.2902 46.1688 11.2902C44.8636 11.2902 44.1419 10.8295 44.019 9.72392H41.2857C41.3471 12.1501 43.2666 13.44 46.1842 13.44Z">
+				</path>
+				<path
+					d="M1.78418 13.179H4.54821V9.50894H7.11261C9.3699 9.50894 10.8287 8.01943 10.8287 5.9157C10.8287 4.81009 10.4294 3.8734 9.72308 3.2131C9.04743 2.56816 8.06466 2.19962 6.72872 2.19962H1.78418V13.179ZM4.54821 7.35914V4.48762H6.5598C7.52721 4.48762 8.09537 5.02507 8.09537 5.90035C8.09537 6.77562 7.54257 7.35914 6.5598 7.35914H4.54821Z">
+				</path>
+			</svg>
+
+			<svg class="PressPlayOnTape__word PressPlayOnTape__word--play" width="42" height="15" viewBox="0 0 42 15"
+				preserveAspectRatio="xMinYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M11.8152 13.44H19.7832V11.04H14.6472V2H11.8152V13.44Z"></path>
+				<path
+					d="M20.2184 13.44H23.0664L23.7224 11.376H27.7224L28.3944 13.44H31.3704L27.2424 2H24.3304L20.2184 13.44ZM24.3784 9.344L25.2584 6.576C25.4504 5.984 25.7224 4.96 25.7224 4.96H25.7544C25.7544 4.96 26.0104 5.984 26.2024 6.576L27.0664 9.344H24.3784Z">
+				</path>
+				<path
+					d="M33.6849 13.44H36.5169V9.216L40.3889 2H37.3969L35.9409 4.96C35.5569 5.744 35.1569 6.704 35.1569 6.704H35.1249C35.1249 6.704 34.7569 5.744 34.3729 4.96L32.9009 2H29.8129L33.6849 9.216V13.44Z">
+				</path>
+				<path
+					d="M1.37793 13.44H4.25793V9.616H6.92993C9.28193 9.616 10.8019 8.064 10.8019 5.872C10.8019 4.72 10.3859 3.744 9.64993 3.056C8.94593 2.384 7.92193 2 6.52993 2H1.37793V13.44ZM4.25793 7.376V4.384H6.35393C7.36193 4.384 7.95393 4.944 7.95393 5.856C7.95393 6.768 7.37793 7.376 6.35393 7.376H4.25793Z">
+				</path>
+			</svg>
+
+			<svg class="PressPlayOnTape__word PressPlayOnTape__word--on" width="26" height="15" viewBox="0 0 26 15"
+				preserveAspectRatio="xMinYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M14.6609 13.35H17.4289V8.022C17.4289 7.622 17.3969 6.15 17.3969 6.15H17.4289C17.4289 6.15 18.0529 7.382 18.2449 7.686L21.6049 13.35H24.4529V1.91H21.6849V7.334C21.6849 7.734 21.7169 9.11 21.7169 9.11H21.6849C21.6849 9.11 21.0769 7.974 20.9009 7.654L17.5089 1.91H14.6609V13.35Z">
+				</path>
+				<circle cx="7.5" cy="7.65" r="6"></circle>
+			</svg>
+
+			<svg class="PressPlayOnTape__word PressPlayOnTape__word--tape" width="42" height="15" viewBox="0 0 42 15"
+				preserveAspectRatio="xMinYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="PressPlayOnTape__word--tape-a"
+					d="M9.68964 13.44H12.5376L13.1936 11.376H17.1936L17.8656 13.44H20.8416L16.7136 2H13.8016L9.68964 13.44ZM13.8496 9.344L14.7296 6.576C14.9216 5.984 15.1936 4.96 15.1936 4.96H15.2256C15.2256 4.96 15.4816 5.984 15.6736 6.576L16.5376 9.344H13.8496Z">
+				</path>
+				<path
+					d="M21.6459 13.44H24.5259V9.616H27.1979C29.5499 9.616 31.0699 8.064 31.0699 5.872C31.0699 4.72 30.6539 3.744 29.9179 3.056C29.2139 2.384 28.1899 2 26.7979 2H21.6459V13.44ZM24.5259 7.376V4.384H26.6219C27.6299 4.384 28.2219 4.944 28.2219 5.856C28.2219 6.768 27.6459 7.376 26.6219 7.376H24.5259Z">
+				</path>
+				<path
+					d="M32.0834 13.44H40.8514V11.04H34.9154V8.592H39.9234V6.384H34.9154V4.336H40.7554V2H32.0834V13.44Z">
+				</path>
+				<path d="M4.68066 13.44H7.51266V4.4H10.8727V2H1.35266V4.4H4.68066V13.44Z"></path>
+			</svg>
+		</a>
+		<button>Play</button>
+		<!-- <button class="menu__btn"></button> -->
+		<nav>
+			<ul>
+				<li>
+					<a href="">Studio</a>
+				</li>
+				<li>
+					<a href="">Case studies</a>
+				</li>
+				<li>
+					<a href="">Services</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="hero">
+			<h1 aria-label="Press Play On Tape">
+				<span aria-hidden="true">Press</span>
+				<span>Play</span>
+				<span>
+					<span class="circle"></span>n
+				</span>
+				<span>Tape</span>
+			</h1>
+		</section>
+
+		<section>
+			<h2>Studio</h2>
+			<div class="grid__2">
+				<h3>Sounds of all kinds for one-of-a-kind experiences.</h3>
+				<p>Press Play On Tape is a multidisciplinary sound studio based in Paris operating at the crossroads of
+					sound design and composition. It was founded a few years ago by Loïc Bénart, known to some as a
+					friend,
+					to others as a dad and to most fellows as “the sound guy.”
+				</p>
+				<p>The studio works alongside innovative brands and institutions to help them tell their story, shape
+					ideas
+					and gather communities through audio branding, production, or basically anything where sound
+					matters.
+				</p>
+				<a href="" class="link">Learn more</a>
+			</div>
+		</section>
+
+		<section>
+			<h2>Case studies</h2>
+			<div class="grid__2">
+				<h4>Bringing audio to the trailblazing worlds of those shaping fresh narratives.</h4>
+			</div>
+			<ul class="accordion">
+				<li>
+					<a href="#">
+						<div class="cube">
+							<div class="face front">
+								<p>
+									D<span class="circle"></span><span class="circle"></span>kie dash
+								</p>
+							</div>
+							<div class="face top" aria-hidden="true">
+								<p>
+									D<span class="circle"></span><span class="circle"></span>kie dash
+									D<span class="circle"></span><span class="circle"></span>kie dash
+									D<span class="circle"></span><span class="circle"></span>kie dash
+									D<span class="circle"></span><span class="circle"></span>kie dash
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="cube">
+							<div class="face front">
+								<p>
+
+									<span class="circle"></span>ney
+								</p>
+							</div>
+							<div class="face top" aria-hidden="true">
+								<p>
+									<span class="circle"></span>ney
+									<span class="circle"></span>ney
+									<span class="circle"></span>ney
+									<span class="circle"></span>ney
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="cube">
+							<div class="face front">
+								<p>
+									Flea tickets
+								</p>
+							</div>
+							<div class="face top" aria-hidden="true">
+								<p>
+									Flea tickets
+									Flea tickets
+									Flea tickets
+									Flea tickets
+								</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<a href="" class="link">View our work</a>
+		</section>
+
+		<section>
+			<h2>Services</h2>
+			<h4>Music, sound and voice. Secretly designed to unlock a little love.</h4>
+			<ul class="service__list">
+				<li>
+					<p class="service__tag">VM</p>
+					<h2>Voice & Mix</h2>
+					<figure>
+						<img src="images/mic.jpeg" alt="Microphone">
+					</figure>
+
+					<ul>
+						<li>Creative Direction</li>
+						<li>Creative Direction</li>
+						<li>Creative Direction</li>
+						<li>Creative Direction</li>
+					</ul>
+					<h5>Voice & Mix</h5>
+
+				</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<h2>
+			<div class="cube">
+				<div class="face front">
+					<p>Let's</p>
+				</div>
+				<div class="face top" aria-hidden="true">
+					<p>Let's</p>
+				</div>
+			</div>
+
+			<div class="cube">
+				<div class="face front">
+					<p>Play</p>
+				</div>
+				<div class="face top" aria-hidden="true">
+					<p>Play</p>
+				</div>
+			</div>
+
+			<div class="cube">
+				<div class="face front">
+					<p>
+						T <span class="circle"></span>ge
+					</p>
+				</div>
+				<div class="face top" aria-hidden="true">
+					<p>
+						T <span class="circle"></span>ge
+					</p>
+				</div>
+			</div>
+
+			<div class="cube">
+				<div class="face front">
+					<p>ther</p>
+				</div>
+				<div class="face top" aria-hidden="true">
+					<p>ther</p>
+				</div>
+			</div>
+		</h2>
+		<p>We saw your future and it sounds good.</p>
+		<a href="" class="link">Contact us</a>
+		<ul>
+			<li>
+				<a href="">Case studies</a>
+			</li>
+			<li>
+				<a href="">Services</a>
+			</li>
+			<li>
+				<a href="">Studio</a>
+			</li>
+
+			<li>
+				<a href="">Instagram</a>
+			</li>
+			<li>
+				<a href="">LinkedIn</a>
+			</li>
+			<li>
+				<a href="">Facebook</a>
+			</li>
+
+			<li>
+				<a href="">Privacy Policy & Cookies</a>
+			</li>
+			<li>
+				<a href="">Web credits</a>
+			</li>
+			<li>
+				&#64; 2023
+			</li>
+		</ul>
+	</footer>
+	<script defer src="scripts/script.js"></script>
+</body>
+
+</html>
