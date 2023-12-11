@@ -70,7 +70,16 @@
 				<path d="M4.68066 13.44H7.51266V4.4H10.8727V2H1.35266V4.4H4.68066V13.44Z"></path>
 			</svg>
 		</a>
-		<button>Play</button>
+		<button>
+			<div class="cube">
+				<div class="face front">
+					<p>Play</p>
+				</div>
+				<div class="face top" aria-hidden="true">
+					<p>Pause</p>
+				</div>
+			</div>
+		</button>
 		<!-- <button class="menu__btn"></button> -->
 		<nav>
 			<ul>
@@ -92,13 +101,48 @@
 	<main>
 		<section class="hero">
 			<h1 aria-label="Press Play On Tape">
-				<span aria-hidden="true">Press</span>
-				<span>Play</span>
-				<span>
-					<span class="circle"></span>n
-				</span>
-				<span>Tape</span>
+				<div class="cube">
+					<div class="face front">
+						<p>Press</p>
+					</div>
+					<div class="face top" aria-hidden="true">
+						<p>Press</p>
+					</div>
+				</div>
+
+				<div class="cube">
+					<div class="face front">
+						<p>Play</p>
+					</div>
+					<div class="face top" aria-hidden="true">
+						<p>Play</p>
+					</div>
+				</div>
+
+				<div class="cube">
+					<div class="face front">
+						<p>
+							<span class="circle"></span>n
+						</p>
+					</div>
+					<div class="face top" aria-hidden="true">
+						<p>
+							<span class="circle"></span>n
+						</p>
+					</div>
+				</div>
+
+				<div class="cube">
+					<div class="face front">
+						<p>Tape</p>
+					</div>
+					<div class="face top" aria-hidden="true">
+						<p>Tape</p>
+					</div>
+				</div>
 			</h1>
+
+			<p>Amplify your worlds</p>
 		</section>
 
 		<section>
