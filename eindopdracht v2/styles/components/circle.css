@@ -1,0 +1,16 @@
+/***********/
+/* Code voor het circel component*/
+/***********/
+
+.circle {
+	margin-right: 0.2rem;
+	width: 13rem;
+	height: 13rem;
+	background: var(--color-black);
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.circle.is--active {
+	animation: animate_circle 1s cubic-bezier(0.54, 0.01, 0.47, 1) infinite;
+}

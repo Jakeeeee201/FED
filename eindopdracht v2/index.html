@@ -4,7 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/header.css">
+	<link rel="stylesheet" href="styles/footer.css">
+	<link rel="stylesheet" href="styles/components/accordion.css">
+	<link rel="stylesheet" href="styles/components/cube.css">
+	<link rel="stylesheet" href="styles/components/circle.css">
+	<link rel="stylesheet" href="styles/components/serviceList.css">
 
 	<meta name="description" content="Front-end Development | HvA, CMD">
 	<meta name="keywords" content="Front-end, HvA, CMD">
@@ -74,9 +81,25 @@
 			<div class="cube">
 				<div class="face front">
 					<p>Play</p>
+					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+						<path d="M320-200v-560l440 280-440 280Z" />
+					</svg>
+
+					<p>Play</p>
+					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+						<path d="M320-200v-560l440 280-440 280Z" />
+					</svg>
+
+					<p>Play</p>
+					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+						<path d="M320-200v-560l440 280-440 280Z" />
+					</svg>
 				</div>
 				<div class="face top" aria-hidden="true">
 					<p>Pause</p>
+					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+						<path d="M560-200v-560h160v560H560Zm-320 0v-560h160v560H240Z" />
+					</svg>
 				</div>
 			</div>
 		</button>
@@ -84,16 +107,16 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="">Studio</a>
+					<a href="#">Studio</a>
 				</li>
 				<li>
-					<a href="">Case studies</a>
+					<a href="#">Case studies</a>
 				</li>
 				<li>
-					<a href="">Services</a>
+					<a href="#">Services</a>
 				</li>
 				<li>
-					<a href="">Contact</a>
+					<a href="#">Contact</a>
 				</li>
 			</ul>
 		</nav>
@@ -110,12 +133,15 @@
 					</div>
 				</div>
 
-				<div class="cube">
-					<div class="face front">
-						<p>Play</p>
-					</div>
-					<div class="face top" aria-hidden="true">
-						<p>Play</p>
+				<div class="cube__container">
+					<div class="cube">
+						<div class="face front">
+							<p>Play</p>
+							<p>Play</p>
+						</div>
+						<div class="face top" aria-hidden="true">
+							<p>Pause</p>
+						</div>
 					</div>
 				</div>
 
@@ -127,7 +153,10 @@
 					</div>
 					<div class="face top" aria-hidden="true">
 						<p>
-							<span class="circle"></span>n
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
 						</p>
 					</div>
 				</div>
@@ -159,7 +188,7 @@
 					and gather communities through audio branding, production, or basically anything where sound
 					matters.
 				</p>
-				<a href="" class="link">Learn more</a>
+				<a href="#" class="link">Learn more</a>
 			</div>
 		</section>
 
@@ -170,7 +199,7 @@
 			</div>
 			<ul class="accordion">
 				<li>
-					<a href="#">
+					<a href="#" aria-label="Dookie Dash">
 						<div class="cube">
 							<div class="face front">
 								<p>
@@ -189,7 +218,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="#" aria-label="Oney">
 						<div class="cube">
 							<div class="face front">
 								<p>
@@ -209,7 +238,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="#" aria-label="Flea tickets">
 						<div class="cube">
 							<div class="face front">
 								<p>
@@ -228,34 +257,85 @@
 					</a>
 				</li>
 			</ul>
-			<a href="" class="link">View our work</a>
+			<a href="#" class="link">View our work</a>
 		</section>
 
-		<section>
+		<section class="section__service" aria-live="polite">
 			<h2>Services</h2>
 			<h4>Music, sound and voice. Secretly designed to unlock a little love.</h4>
 			<ul class="service__list">
-				<li>
-					<p class="service__tag">VM</p>
-					<h2>Voice & Mix</h2>
+				<li tabindex="3">
+					<h2 aria-label="Sound Design">Sound Design Sound Design Sound Design </h2>
+					<h5 aria-hidden="true">Sound Design</h5>
+					<p>VM</p>
 					<figure>
 						<img src="images/mic.jpeg" alt="Microphone">
 					</figure>
-
 					<ul>
-						<li>Creative Direction</li>
-						<li>Creative Direction</li>
-						<li>Creative Direction</li>
-						<li>Creative Direction</li>
+						<li>Casting & Recording</li>
+						<li>Talent Direction</li>
+						<li>Voice over</li>
+						<li>Commercials & Trailers</li>
+						<li>Post Sync</li>
+						<li>Remote recording</li>
 					</ul>
-					<h5>Voice & Mix</h5>
+				</li>
 
+				<li tabindex="2">
+					<h2 aria-label="Compositions">Compositions Compositions Compositions</h2>
+					<h5 aria-hidden="true">Compositions</h5>
+					<p>AB</p>
+					<figure>
+						<img src="images/mic.jpeg" alt="Microphone">
+					</figure>
+					<ul>
+						<li>Casting & Recording</li>
+						<li>Talent Direction</li>
+						<li>Voice over</li>
+						<li>Commercials & Trailers</li>
+						<li>Post Sync</li>
+						<li>Remote recording</li>
+					</ul>
+				</li>
+
+				<li tabindex="1" aria-posinset="2" aria-setsize="4">
+					<h2 aria-label="Audio Branding">Audio Branding Audio Branding Audio Branding</h2>
+					<h5 aria-hidden="true">Audio Branding</h5>
+					<p>C</p>
+					<figure>
+						<img src="images/mic.jpeg" alt="Microphone">
+					</figure>
+					<ul>
+						<li>Casting & Recording</li>
+						<li>Talent Direction</li>
+						<li>Voice over</li>
+						<li>Commercials & Trailers</li>
+						<li>Post Sync</li>
+						<li>Remote recording</li>
+					</ul>
+				</li>
+
+				<li tabindex="0" aria-posinset="1" aria-setsize="4">
+					<h2 aria-label="Voice & Mix">Voice & Mix Voice & Mix Voice & Mix</h2>
+					<h5 aria-hidden="true">Voice & Mix</h5>
+					<p>CD</p>
+					<figure>
+						<img src="images/mic.jpeg" alt="Microphone">
+					</figure>
+					<ul>
+						<li>Casting & Recording</li>
+						<li>Talent Direction</li>
+						<li>Voice over</li>
+						<li>Commercials & Trailers</li>
+						<li>Post Sync</li>
+						<li>Remote recording</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
 	</main>
 	<footer>
-		<h2>
+		<h2 aria-label="Let's play together">
 			<div class="cube">
 				<div class="face front">
 					<p>Let's</p>
@@ -297,33 +377,33 @@
 			</div>
 		</h2>
 		<p>We saw your future and it sounds good.</p>
-		<a href="" class="link">Contact us</a>
+		<a href="#" class="link">Contact us</a>
 		<ul>
 			<li>
-				<a href="">Case studies</a>
+				<a href="#">Case studies</a>
 			</li>
 			<li>
-				<a href="">Services</a>
+				<a href="#">Services</a>
 			</li>
 			<li>
-				<a href="">Studio</a>
-			</li>
-
-			<li>
-				<a href="">Instagram</a>
-			</li>
-			<li>
-				<a href="">LinkedIn</a>
-			</li>
-			<li>
-				<a href="">Facebook</a>
+				<a href="#">Studio</a>
 			</li>
 
 			<li>
-				<a href="">Privacy Policy & Cookies</a>
+				<a href="#">Instagram</a>
 			</li>
 			<li>
-				<a href="">Web credits</a>
+				<a href="#">LinkedIn</a>
+			</li>
+			<li>
+				<a href="#">Facebook</a>
+			</li>
+
+			<li>
+				<a href="#">Privacy Policy & Cookies</a>
+			</li>
+			<li>
+				<a href="#">Web credits</a>
 			</li>
 			<li>
 				&#64; 2023

@@ -1,0 +1,131 @@
+ul.service__list {
+	display: flex;
+	flex-direction: row-reverse;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+ul.service__list * {
+	white-space: nowrap;
+}
+
+ul.service__list>li {
+	padding: 5.6rem var(--spacing-medium) 1.6rem;
+	width: 6rem;
+	max-width: 55rem;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-rows: 1fr auto auto;
+	transition: width 0.6s var(--ease-out);
+}
+
+ul.service__list>li:nth-child(1) {
+	background: var(--color-green);
+}
+
+ul.service__list>li:nth-child(2) {
+	background: var(--color-blue);
+}
+
+ul.service__list>li:nth-child(3) {
+	background: var(--color-yellow);
+}
+
+ul.service__list>li:nth-child(4) {
+	background: var(--color-red);
+}
+
+ul.service__list>li:hover {
+	width: 7rem;
+}
+
+ul.service__list>li.is--active {
+	width: 100%;
+}
+
+ul.service__list li h2,
+ul.service__list li img,
+ul.service__list li ul {
+	opacity: 0;
+	transition: 0.6s var(--ease-out);
+}
+
+ul.service__list li.is--active h2,
+ul.service__list li.is--active img,
+ul.service__list li.is--active ul {
+	opacity: 1;
+}
+
+
+ul.service__list li h2 {
+	margin-bottom: 8rem;
+	font-size: 8.8rem;
+	align-self: start;
+	white-space: nowrap;
+}
+
+ul.service__list li.is--active h2 {
+	animation: move 10s linear infinite;
+}
+
+ul.service__list li h2::before {
+	display: none;
+}
+
+ul.service__list li h5 {
+	transform: rotate(-90deg);
+	transform-origin: top left;
+	white-space: nowrap;
+	transition: var(--transition-1);
+	position: absolute;
+	bottom: 0;
+	left: 1.4rem;
+}
+
+ul.service__list li.is--active h5 {
+	transform: rotate(-90deg) translateY(-4rem);
+}
+
+ul.service__list li img {
+	margin-bottom: var(--spacing-xlarge);
+	max-width: 23rem;
+	min-width: 23rem;
+	border-radius: 1rem;
+}
+
+ul.service__list ul {
+	border-bottom: var(--border);
+}
+
+ul.service__list ul li {
+	padding: 0.2rem 0;
+	font-weight: var(--font-weight-bold);
+	border-top: var(--border);
+}
+
+ul.service__list li>p {
+	width: 4rem;
+	height: 4rem;
+	color: var(--color-white);
+	background: var(--color-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	font-weight: var(--font-weight-bold);
+
+	position: absolute;
+	top: 1.6rem;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+ul.service__list li.is--active>p {
+	right: 1.6rem;
+	transform: translateX(0);
+}

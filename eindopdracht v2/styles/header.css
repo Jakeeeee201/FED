@@ -1,0 +1,123 @@
+/***********/
+/* Code voor de header*/
+/***********/
+header {
+	padding: 1.5rem var(--spacing-large);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+header.header__sticky {
+	margin: 0 auto;
+	width: fit-content;
+	position: fixed;
+	z-index: 1;
+	transition: var(--transition-1);
+	background: var(--color-white);
+	box-shadow: 0 -2rem 3rem 2rem rgba(0, 0, 0, .04);
+}
+
+header>a {
+	display: flex;
+	min-width: 16.4rem;
+}
+
+
+
+/***********/
+/* Code voor het logo*/
+/***********/
+header a svg {
+	width: 1.1rem;
+	transition: 0.45s ease;
+}
+
+header svg:nth-child(3) {
+	width: 1.35rem;
+}
+
+header>a:hover svg:nth-child(1) {
+	width: 5.4rem;
+}
+
+header>a:hover svg:nth-child(2),
+header>a:hover svg:nth-child(4) {
+	width: 4.2rem;
+}
+
+header>a:hover svg:nth-child(3) {
+	width: 2.6rem;
+}
+
+header nav ul {
+	display: flex;
+	gap: 4rem;
+}
+
+
+/***********/
+/* Code voor de play button in de header*/
+/***********/
+header button {
+	width: 8rem;
+	height: 2.4rem;
+	cursor: pointer;
+	background: var(--color-black);
+	color: var(--color-white);
+	border-radius: 0.4rem;
+	transition: transform .35s cubic-bezier(.33, 1, .68, 1);
+	text-transform: uppercase;
+	overflow: hidden;
+
+	display: flex;
+	padding: 0;
+	align-items: center;
+	justify-content: center;
+	font-weight: var(--font-weight-bold);
+}
+
+header.header__sticky button {
+	margin-right: 2rem;
+}
+
+header button:hover {
+	transform: scale(1.45);
+}
+
+header button p {
+	font-size: 1.4rem !important;
+	color: var(--color-white) !important;
+}
+
+header button .face {
+	padding: 0;
+	background: var(--color-black);
+	display: flex;
+	justify-content: center;
+	transform: translateZ(1.4rem);
+	overflow: unset;
+}
+
+header button .face.front {
+	animation: move 2s linear infinite;
+}
+
+header button svg {
+	width: 1.8rem;
+	fill: var(--color-white);
+	flex-shrink: 0;
+}
+
+header button .front svg {
+	margin-right: 0.8rem;
+}
+
+header button .top {
+	transform: rotateX(90deg) translateZ(0.8rem);
+}
