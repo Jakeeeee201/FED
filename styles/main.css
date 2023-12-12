@@ -1,0 +1,270 @@
+:root {
+    /* colors */
+    --color-black: #150c0f;
+    --color-white: #f8f8f8;
+    --color-grey: #f4f5ef;
+    --color-blue: #1795f0;
+    --color-green: #30e462;
+    --color-yellow: #f9b71b;
+    --color-red: #ff2803;
+
+    /* font */
+    --font-family-medium: 'NeueHaasGrotesMedium';
+    --font-family-bold: 'NeueHaasGrotesBold';
+    --backup-font-family: sans-serif;
+
+    --font-path-medium: '../fonts/NeueHaasGrotesMedium.woff2';
+    --font-path-bold: '../fonts/NeueHaasGrotesBold.woff2';
+
+    /* font sizes */
+    --heading-1: 18rem;
+    --heading-2: 1.4rem;
+    --heading-3: 6.4rem;
+    --heading-4: 4rem;
+    --heading-5: 2.4rem;
+    --body-text: 1.4rem;
+    --body-text-medium: 2.4rem;
+    --body-text-large: 3.2rem;
+
+    /* font weights */
+    --font-weight-thin: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* line heights */
+    --line-height-small: 1;
+    --line-height-medium: 1.06;
+    --line-height-large: 1.14;
+
+    /* spacing */
+    --spacig-unit: 0.8rem;
+    --spacing-small: var(--spacig-unit);
+    --spacing-medium: calc(2 * var(--spacig-unit));
+    --spacing-large: calc(3 * var(--spacig-unit));
+    --spacing-xlarge: calc(4 * var(--spacig-unit));
+
+    /* border radius */
+    --border-radius: 5rem;
+
+    /* animation */
+    --animation-duration: 0.3s;
+    --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    /* transitions */
+    --transition-1: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+
+
+    /* borders */
+    --border-width: 0.1rem;
+    --border: var(--border-width) solid var(--color-black);
+}
+
+
+/***********/
+/* Dark mode*/
+/***********/
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--color-black: #f8f8f8;
+		--color-white: #150c0f;
+		--color-grey: #252525;
+		--color-blue: #1795f0;
+		--color-green: #30e462;
+		--color-yellow: #f9b71b;
+		--color-red: #ff2803;
+	}
+} */
+
+/***********/
+/* Verminderde beweging*/
+/***********/
+@media (prefers-reduced-motion:reduce) {
+    :root {
+        --animation-duration: 0s;
+        /* --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1); */
+    }
+}
+
+/***********/
+/* Font face instellen*/
+/***********/
+@font-face {
+    font-family: var(--font-family-medium);
+    src: url('../fonts/NeueHaasGrotesMedium.woff2') format('woff2');
+    font-weight: var(--font-weight-medium);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: var(--font-family-bold);
+    src: url('../fonts/NeueHaasGrotesBold.woff2') format('woff2');
+    font-weight: var(--font-weight-bold);
+    font-style: normal;
+}
+
+body {
+    font-family: var(--font-family-medium), var(--backup-font-family);
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    margin: var(--calc);
+}
+
+/***********/
+/* Code voor de styling van typografie*/
+/***********/
+h1 {
+    font-size: var(--heading-1);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    display: grid;
+}
+
+h2 {
+    font-size: var(--heading-2);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+}
+
+h2 span {
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-black);
+    border-radius: var(--border-radius);
+}
+
+h3 {
+    font-size: var(--heading-3);
+    line-height: var(--line-height-small);
+}
+
+h4 {
+    font-size: var(--heading-4);
+    line-height: var(--line-height-medium);
+}
+
+h5 {
+    font-size: var(--heading-5);
+}
+
+a,
+span {
+    display: block;
+    text-decoration: none;
+    color: var(--color-black)
+}
+
+a {
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+}
+
+a.link {
+    padding: 1.4rem 0;
+    display: flex;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 0.4rem;
+    transition: var(--transition-1);
+    grid-column: span 2;
+}
+
+a.link:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+p,
+a,
+li {
+    font-size: var(--body-text);
+    line-height: var(--line-height-large);
+}
+
+/***********/
+/* Code voor het verwijderen van de default styling*/
+/***********/
+ul {
+    list-style-type: none;
+}
+
+svg {
+    fill: var(--color-black);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+
+
+
+
+
+
+/***********/
+/* Code voor keyframe animaties*/
+/***********/
+
+/* Animatie voor het bewegen van tekst van links naar rechts (infinite) */
+@keyframes animate_text {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes move {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animatie om de cirkels te laten bewegen */
+@keyframes animate_circle {
+    0% {
+        scale: 1
+    }
+
+    40% {
+        scale: 0.9
+    }
+
+    60% {
+        scale: 1.1
+    }
+
+    80% {
+        scale: 0.8;
+    }
+}

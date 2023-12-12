@@ -1,0 +1,51 @@
+/***********/
+/* Code voor het 3d cube component*/
+/***********/
+.cube {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform var(--transition-1);
+}
+
+.cube p {
+	display: flex;
+	align-items: center;
+	/* white-space: nowrap; */
+
+	/* duplicate */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--spacing-medium);
+	font-size: var(--heading-1);
+	text-transform: uppercase;
+}
+/***********/
+/* Code voor de kanten van de cube*/
+/***********/
+.face {
+	padding: 0 2.4rem;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: var(--color-white);
+	/* border: 0.1rem solid var(--color-green); */
+	overflow: hidden;
+}
+
+.front {
+	transform: translateZ(10rem);
+}
+
+.top {
+	transform: rotateX(90deg) translateZ(10rem);
+	transition: 0.5s var(--ease-out);
+}
+
+/***********/
+/* Code voor de toggle state van de cube*/
+/***********/
+.rotate {
+	transform: rotateX(-90deg);
+}

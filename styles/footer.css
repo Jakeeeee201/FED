@@ -1,0 +1,90 @@
+/***********/
+/* Code voor de footer*/
+/***********/
+footer .circle {
+	background: var(--color-white);
+}
+
+footer span,
+footer p,
+footer a,
+footer li {
+	color: var(--color-white);
+}
+
+footer {
+	padding: 4.8rem 2.4rem 2.4rem;
+	background: var(--color-black);
+}
+
+footer .cube {
+	height: 20rem;
+}
+
+footer h2 {
+	margin-bottom: 12rem;
+	display: block;
+}
+
+footer h2 .cube:nth-of-type(1) .face {
+	justify-content: flex-end;
+}
+
+footer h2 .cube:nth-of-type(3) .face {
+	justify-content: center;
+}
+
+footer h2::before {
+	display: none;
+}
+
+footer>p {
+	margin-left: 50%;
+	width: 37%;
+	margin-bottom: var(--spacing-large);
+	font-size: var(--body-text-large);
+	font-weight: var(--font-weight-bold);
+	grid-column: 2;
+}
+
+footer a.link {
+	margin-left: 50%;
+	width: 37%;
+	border-color: var(--color-white);
+}
+
+footer a.link:hover {
+	background: var(--color-white);
+	color: var(--color-black);
+}
+
+footer ul {
+	display: grid;
+	grid-template: repeat(3, 1fr) / 1fr 1fr 2fr;
+	grid-auto-flow: column;
+	gap: 0.4rem 0;
+	margin-top: 12rem;
+}
+
+footer li {
+	width: fit-content;
+}
+
+footer li:nth-last-child(-n+3) {
+	justify-self: end;
+}
+
+footer li a {
+	font-weight: var(--font-weight-medium);
+	text-transform: none;
+}
+
+footer .face {
+	display: flex;
+	align-items: center;
+	background: var(--color-black);
+}
+
+footer .face {
+	color: var(--color-white);
+}
